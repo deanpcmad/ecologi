@@ -6,7 +6,7 @@ This is a Ruby library for interacting with the Ecologi API.
 
 To get started, install the gem as normal:
 
-```
+```ruby
 gem "ecologi"
 ```
 
@@ -22,7 +22,7 @@ You can then use the following methods.
 
 ### Purchasing Trees
 
-To purchase trees for an account. Requires a number. The name parameter is optional. Returns a `Ecologi::TreePurchase` response.
+To purchase trees for an account. Requires a number. The name parameter is optional.
 
 ```ruby
 @client.trees.purchase number: 2, name: "Tree's for user"
@@ -32,7 +32,7 @@ To purchase trees for an account. Requires a number. The name parameter is optio
 
 ### Purchasing Carbon Offsets
 
-To purchase carbon offsets for an account. Requires number and units. Returns a `Ecologi::CarbonOffsetPurchase` response.
+To purchase carbon offsets for an account. Requires number and units.
 
 Units must be either KG or Tonnes.
 
@@ -44,7 +44,7 @@ Units must be either KG or Tonnes.
 
 ### Reporting - Total Impact
 
-Returns a `Ecologi::Report` object with the total number of trees and carbon offset for a user.
+Returns the total number of trees and carbon offset for a user.
 
 ```ruby
 @client.reporting.total_impact username: "deanpcmad"
@@ -54,7 +54,7 @@ Returns a `Ecologi::Report` object with the total number of trees and carbon off
 
 ### Reporting - Total Trees
 
-Returns a `Ecologi::Report` object with the total number of trees for a user.
+Returns the total number of trees for a user.
 
 ```ruby
 @client.reporting.total_trees username: "deanpcmad"
@@ -64,7 +64,7 @@ Returns a `Ecologi::Report` object with the total number of trees for a user.
 
 ### Reporting - Total Carbon Offset
 
-Returns a `Ecologi::Report` object with the total amount of carbon offset for a user.
+Returns the total amount of carbon offset for a user.
 
 ```ruby
 @client.reporting.total_carbon username: "deanpcmad"
